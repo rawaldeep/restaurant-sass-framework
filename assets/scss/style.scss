@@ -97,13 +97,22 @@ body{
              iframe{
              position: absolute;
              top: 2em;
-            width: 95%;}
+            width: 95%;
+            @media only screen and (max-width: $responsive-break) { 
+            position: inherit;
+            top:0;
+            }
+        
+        }
         }
         .gallary{
             height: 26em;
             width: 100%;
             overflow: hidden;
             transition: all 1s ease;
+            @media only screen and (max-width: $responsive-break) { 
+                height: auto;
+                }
             .page-btn{
                 position: absolute;
                 right: 0;
@@ -151,20 +160,19 @@ body{
           }
           }
       }
-      .social-icons{ font-size: 1.4em;}
+      .social-icons{ font-size: 1.4em;
+        @media only screen and (max-width: $responsive-break) { 
+            padding: 1em 0 !important;
+            div span{
+                padding: 0 !important;
+                font-size: 1em;
+            }
+            }
+    }/*social icons*/
   }
  
 
 }
-
-@media screen and (max-width: $responsive-break) {
-.lmap {iframe{
-    position: inherit;
-    top:0;}
-}
-.gallary {
-    height: auto;}
-  }
 }
 .img-thumbnail{
     width: 100%;
