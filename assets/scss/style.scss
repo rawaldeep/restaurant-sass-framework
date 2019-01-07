@@ -1,0 +1,171 @@
+@import "../../node_modules/bootstrap/scss/bootstrap.scss";
+$responsive-break: 820px;
+.class1{
+    text-indent: inherit;
+    width: auto;
+    height: auto;
+    margin: 1em 0 0;
+    padding: 0.5rem 0.75rem;
+    margin-left: -1px;
+    line-height: 1.25;
+    color: #007bff;
+    background-color: #fff;
+    border: 1px solid #dee2e6;
+}
+body{
+    .navbar{ transition: all 0.5s ease;}
+    .head{
+        background-image: url("../img/84770f_7693c2f2d0f940b1be3720f66dc42189.jpg");
+        background-size: cover;
+        height: 400px;
+        }
+    .jumbotron-fluid{
+        #myslider {
+            width: 100%;
+            top: 0;
+            max-height: 100vh;
+            overflow: hidden;
+            .carousel-inner{
+            .carousel-item {
+               
+            .overlay{
+                position: absolute;
+                z-index: 1;
+                top: 0;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                opacity: .5;
+                background: #303030; }/*overlay*/
+            }    /*carousel-item*/     
+            
+            .intro{
+                text-align: center;
+                top: 12.5em;
+                .sliderlogo{
+                img { width: 5rem;}
+                }
+                /*- mouse animation */
+                @keyframes scroll {
+                    0% { opacity: 0; }
+                    10% { transform: translateY(0); opacity: 1; }
+                    100% { transform: translateY(15px); opacity: 0;}
+                  }
+                .scroll-downs {
+                position: relative;
+                top: 0;
+                right: 0;
+                bottom: 0;
+                left: 0;
+                margin: auto;
+                width :34px;
+                height: 55px;  
+                .mousey {
+                    width: 3px;
+                    padding: 10px 15px;
+                    height: 35px;
+                    border: 2px solid whitesmoke;
+                    border-radius: 25px;
+                    opacity: 0.75;
+                    box-sizing: content-box;
+                  
+                  .scroller {
+                    width: 3px;
+                    height: 10px;
+                    border-radius: 25%;
+                    background-color: whitesmoke;
+                    animation-name: scroll;
+                    animation-duration: 2.2s;
+                    animation-timing-function: cubic-bezier(.15,.41,.69,.94);
+                    animation-iteration-count: infinite;
+                  }
+                }
+                }/*scroll-down*/
+            }  /*intro*/  
+            
+        }/*carousel-inner*/
+        }/*myslider*/
+    }/*jumbotron*/
+    .reverse{
+        margin-top: -250px;
+        background-color: #fff;
+        .frame{
+            width: inherit;
+            margin: 5em 0 0 0;
+        }
+        .lmap{
+             iframe{
+             position: absolute;
+             top: 2em;
+            width: 95%;}
+        }
+        .gallary{
+            height: 26em;
+            width: 100%;
+            overflow: hidden;
+            transition: all 1s ease;
+            .page-btn{
+                position: absolute;
+                right: 0;
+                bottom: 0;
+                left: 0;
+                z-index: 15;
+                display: -ms-flexbox;
+                display: grid;
+                grid-gap: 2em;
+                grid-template-columns: auto auto;
+                -ms-flex-pack: center;
+                justify-content: center;
+                padding-left: 0;
+                margin-right: 15%;
+                margin-left: 15%;
+                list-style: none;
+                .control-prev{ @extend .class1;
+                    text-decoration: none;
+                    margin: 1em 4em 1em 2.3em;
+                    text-align: center;
+                    }
+                
+            }/*page-btn*/
+            .carousel-indicators { 
+                bottom: 1em;
+                margin: 0 auto;
+                width: fit-content;
+                li{
+                    @extend .class1;
+                }
+            }/*carousel-indicators*/
+        }/*gallary*/
+    }/*reverse*/
+.footer{
+    background-color: #343a40;
+    color: #fff;
+  .container{
+      div{
+          .nav{
+            .nav-item {
+                span{
+              display: block;
+              padding: .5rem 1rem;
+            }
+          }
+          }
+      }
+      .social-icons{ font-size: 1.4em;}
+  }
+ 
+
+}
+
+@media screen and (max-width: $responsive-break) {
+.lmap {iframe{
+    position: inherit;
+    top:0;}
+}
+.gallary {
+    height: auto;}
+  }
+}
+.img-thumbnail{
+    width: 100%;
+}
